@@ -1,0 +1,35 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   Actor.java
+
+import java.awt.Graphics;
+import java.awt.Rectangle;
+
+public interface Actor
+{
+
+    public abstract boolean isBackground();
+
+    public abstract void move();
+
+    public abstract boolean hasDirty();
+
+    public abstract Rectangle getDirtyRectangle();
+
+    public abstract Rectangle getBounds();
+
+    public abstract boolean intersects(Rectangle rectangle);
+
+    public abstract void hit(Actor actor);
+
+    public abstract boolean isAlive();
+
+    public abstract void die();
+
+    public abstract void draw(Graphics g);
+
+    public abstract int getZOrder();
+
+    public abstract int collisionVector();
+}

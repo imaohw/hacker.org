@@ -1,0 +1,1 @@
+All you need is Golly<http://golly.sourceforge.net/> and the Hashlife alg.

@@ -1,0 +1,79 @@
+V "GNAT Lib v4.7"
+P SS ZX
+R nnnnnnnvnvnnnnnnnnvnnvnvvvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnn
+
+U random%b		random.adb		535d38df NE OO PK GE
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W calendar%s		calendar.ads		calendar.ali
+
+U random%s		random.ads		56a99ac4 BN EE NE OO PK GE
+
+D ada.ads		20070406091342 3ffc8e18
+D a-calend.ads		20120123094226 343c83dd
+D a-except.ads		20110829141257 265fe451
+D a-finali.ads		20111121113555 52ecdc1b
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-stream.ads		20090409150019 2ca4ee37
+D a-tags.ads		20111212115430 6c0509d0
+D a-textio.ads		20110801102749 386df5d4
+D a-unccon.ads		20070406091342 f9eb8f06
+D calendar.ads		20070406091342 2cb525cd
+D interfac.ads		20110906094621 129923ea
+D i-cstrea.ads		20100622165701 1bd72c32
+D random.ads		20080411210335 56a99ac4
+D random.adb		20080411210405 112c7202
+D system.ads		20110829101445 eb6e42ba
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20110805141436 443b9d66
+D s-finmas.ads		20111024091915 b95bb341
+D s-finroo.ads		20110803143626 2dd85ce2
+D s-parame.ads		20110830140625 b6e20cc0
+D s-pooglo.ads		20110804083314 542f33d0
+D s-secsta.ads		20110830140625 eea35a36
+D s-soflin.ads		20110829130749 a3409513
+D s-stache.ads		20090417130712 596fc1b4
+D s-stalib.ads		20110802143906 f78bcf95
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stopoo.ads		20111013103733 7b8fbeee
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 14|2r6 3r5
+X 2 a-calend.ads
+38I9*Time 14|14r23
+50O12*Day_Duration{duration} 14|15r23
+52V13*Clock{38I9} 14|20s21
+61V13*Seconds{50O12} 14|21s15
+X 8 a-textio.ads
+49K13*Text_IO 471e16 14|2w10 3r9
+263U14*Put_Line 14|39s7
+X 10 calendar.ads
+18K9*Calendar=18:30 14|2w19 3r18
+X 13 random.ads
+2F9 FLOAT_ITEM 7r38 9r29 11r34 14|7r13 8r13 9r13 10r13 16r23 18r23 22r15
+. 24r24 25r41 30r35 31r8 35r25 43r26 49r31 50r19 55r19
+3k9*Random 2z9 13l5 13e11 14|5b14 60l5 60t11
+5U14*Set_Seed 14|13b11 27l5 27t13
+7U14*Force_Seed 7>25 14|30b11 40l5 40t15
+7*25 Start_Seed{2F9} 14|30b22 34r28 35r12 36r17
+9V13*Get_Seed{2F9} 14|43b10 46l5 46t13
+11V13*Random_Number{2F9} 14|49b10 58l5 58t18
+X 14 random.adb
+7*1 X_initial{13|2F9} 26m4 36m4 45r11 53r16 56m4
+8*1 M{13|2F9}
+9*1 A{13|2F9} 53r12
+10*1 C{13|2F9} 53r28
+14i4 Time_And_Date{2|38I9} 20m4 21r23
+15o4 All_Day{2|50O12} 21m4 22r26 24r35
+16*4 Minutes{13|2F9} 22m4 23r27
+17i4 Int_Minutes{integer} 23m4 25r52
+18*4 Part_Of_A_Minute{13|2F9} 24m4
+31*1 Temp{13|2F9} 35m4
+32i1 Natural_Temp{natural} 34m4 35r36
+50*4 Temp{13|2F9} 53m4 54r28 55m4 55r12 56r17 57r11
+51i4 Natural_Temp{natural} 54m4 55r30
+

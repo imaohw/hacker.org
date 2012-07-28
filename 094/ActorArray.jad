@@ -1,0 +1,526 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   ActorArray.java
+
+import java.awt.*;
+import java.awt.image.ImageObserver;
+import java.io.PrintStream;
+
+public final class ActorArray
+{
+    public final class ActorIterator
+    {
+
+        public void reset()
+        {
+            IlI1I = Block.SSSS;
+        }
+
+        public boolean hasNext()
+        {
+            int i;
+            long l1;
+            l1 = Ball.S$$;
+            long l = Ball.S$$;
+            l = Ball.S$$;
+            l = Ball.S$$;
+            l = Ball.S$$;
+            l = Ball.S$$;
+            l = Ball.S$$;
+            i = IlI1I;
+            l1 = (long)llll.S55$S & 0xffffffffL ^ l1 & 0xffffffff00000000L;
+            BouncingMovementCalculator.I1Ill.booleanValue();
+            JVM INSTR ifge 66;
+               goto _L1 _L2
+_L1:
+            break MISSING_BLOCK_LABEL_64;
+_L2:
+            break MISSING_BLOCK_LABEL_66;
+            null;
+            throw ;
+            if(i < (int)(l1 & 0xffffffffL) - Block.llI)
+                return Block.llI;
+            return BonusActor.lll;
+        }
+
+        public Actor next()
+        {
+            long l1 = Ball.S$$;
+            long l = Ball.S$$;
+            l = Ball.S$$;
+            IlI1I = IlI1I + Block.llI;
+            return llll.$$$5S[(int)(((long)IlI1I & 0xffffffffL ^ l1 & 0xffffffff00000000L) & 0xffffffffL)];
+        }
+
+        public Actor current()
+        {
+            return llll.$$$5S[IlI1I];
+        }
+
+        public static long reset(Paddle paddle)
+        {
+            return System.currentTimeMillis();
+        }
+
+        public static void hasNext(String s, PrintStream printstream)
+        {
+            printstream.println(s);
+        }
+
+        public static StringBuffer next(String s, StringBuffer stringbuffer)
+        {
+            return stringbuffer.append(s);
+        }
+
+        public static Integer next(String s)
+        {
+            return Integer.valueOf(s);
+        }
+
+        public static void reset(Object obj, PrintStream printstream)
+        {
+            printstream.println(obj);
+        }
+
+        public static void reset(Color color, Component component)
+        {
+            component.setBackground(color);
+        }
+
+        public static void next(Color color, Graphics g)
+        {
+            g.setColor(color);
+        }
+
+        public static void reset(MediaTracker mediatracker)
+        {
+            mediatracker.waitForAll();
+        }
+
+        int IlI1I;
+        final ActorArray llll; /* synthetic field */
+        public static double lI1 = 0.95999999999999996D;
+        public static String lIl = "topBounce";
+        public static int IIII = 16;
+        public static boolean SS5S$5 = true;
+        public static Boolean S5555$ = new Boolean(false);
+
+
+        public ActorIterator()
+        {
+            IlI1I = Block.SSSS;
+        }
+    }
+
+
+    public static void main(String args[])
+    {
+        long l;
+        l = Ball.S$$;
+        args = new ActorArray(BreakoutGame.S$55);
+        l = (long)BonusActor.lll & 0xffffffffL ^ l & 0xffffffff00000000L;
+          goto _L1
+_L3:
+        args.add(new FixedActor((int)(l & 0xffffffffL), (int)(l & 0xffffffffL), (int)(l & 0xffffffffL), (int)(l & 0xffffffffL)));
+        l = (long)(Block.llI + (int)(l & 0xffffffffL)) ^ l & 0xffffffff00000000L;
+_L1:
+        if((int)(l & 0xffffffffL) < 50) goto _L3; else goto _L2
+_L2:
+        args = args.iterator();
+        while((int)(((l = (long)args.hasNext() << 36 & 0x1000000000L ^ l & 0xffffffefffffffffL) & 0x1000000000L) >> 36) != 0) 
+        {
+            PrintStream printstream = System.out;
+            ActorIterator.reset(args.next(), printstream);
+        }
+        args;
+        BreakoutGame.DestroyerBonus.II1Il;
+        JVM INSTR ifge 160;
+           goto _L4 _L5
+_L4:
+        JVM INSTR pop ;
+        break MISSING_BLOCK_LABEL_221;
+_L6:
+        throw ;
+_L5:
+        reset();
+        while((int)(((l = (long)args.hasNext() << BreakoutGame.DoubleBallBonus.$55$ & 0x100000000L ^ l & 0xfffffffeffffffffL) & 0x100000000L) >> BreakoutGame.DoubleBallBonus.$55$) != 0) 
+        {
+            PrintStream printstream1 = System.out;
+            ActorIterator.reset(args.next(), printstream1);
+        }
+        return;
+        null;
+          goto _L6
+    }
+
+    public ActorArray()
+    {
+        S55$S = BonusActor.lll;
+        S55SS = BreakoutGame.NullBonus.l1IIl;
+        $$$5S = new Actor[BreakoutGame.NullBonus.lIll];
+    }
+
+    public ActorArray(int i)
+    {
+        S55$S = BonusActor.lll;
+        S55SS = BreakoutGame.NullBonus.l1IIl;
+        $$$5S = new Actor[i];
+    }
+
+    public void add(Actor actor)
+    {
+        long l;
+        long l1;
+        long l2;
+        long l3;
+        long l4;
+        long l5;
+        l5 = Ball.S$$;
+        l4 = Ball.S$$;
+        l4 = Ball.S$$;
+        l4 = Ball.S$$;
+        l4 = Ball.S$$;
+        l4 = Ball.S$$;
+        l4 = Ball.S$$;
+        l4 = Ball.S$$;
+        l4 = Ball.S$$;
+        l4 = Ball.S$$;
+        l4 = Ball.S$$;
+        l4 = Ball.S$$;
+        l4 = Ball.S$$;
+        l4 = Ball.S$$;
+        l4 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l2 = Ball.S$$;
+        l2 = Ball.S$$;
+        l2 = Ball.S$$;
+        l2 = Ball.S$$;
+        l1 = Ball.S$$;
+        l1 = Ball.S$$;
+        l1 = Ball.S$$;
+        l1 = Ball.S$$;
+        l = Ball.S$$;
+        l = Ball.S$$;
+        l = Ball.S$$;
+        l = (long)S55$S << BreakoutGame.DoubleBallBonus.$55$ & 0xffffffff00000000L ^ Ball.S$$ & 0xffffffffL;
+        if((int)((l & 0xffffffff00000000L) >> BreakoutGame.DoubleBallBonus.$55$) < $$$5S.length)
+            break MISSING_BLOCK_LABEL_370;
+        l5 = (long)$$$5S.length & 0xffffffffL ^ l5 & 0xffffffff00000000L;
+        l1 = (long)S55SS & 0xffffffffL ^ l1 & 0xffffffff00000000L;
+        Block.lIlIlI;
+        JVM INSTR ifge 237;
+           goto _L1 _L2
+_L1:
+        break MISSING_BLOCK_LABEL_235;
+_L2:
+        break MISSING_BLOCK_LABEL_237;
+        null;
+        throw ;
+        l2 = (long)((int)(l5 & 0xffffffffL) + (int)(l1 & 0xffffffffL)) & 0xffffffffL ^ l2 & 0xffffffff00000000L;
+        S55SS = (int)((((long)((int)(((long)S55SS & 0xffffffffL ^ l3 & 0xffffffff00000000L) & 0xffffffffL) << -95) << BreakoutGame.DoubleBallBonus.$55$ & 0xffffffff00000000L ^ l1 & 0xffffffffL) & 0xffffffff00000000L) >> BreakoutGame.DoubleBallBonus.$55$);
+        Actor aactor[];
+        MovingResults.toString($$$5S, BonusActor.lll, aactor = new Actor[(int)(l2 & 0xffffffffL)], BonusActor.lll, (int)(((long)S55$S & 0xffffffffL ^ l4 & 0xffffffff00000000L) & 0xffffffffL));
+        $$$5S = aactor;
+        $$$5S[(int)((((long)S55$S << BreakoutGame.DoubleBallBonus.$55$ & 0xffffffff00000000L ^ l5 & 0xffffffffL) & 0xffffffff00000000L) >> BreakoutGame.DoubleBallBonus.$55$)] = actor;
+        S55$S = (int)((((long)((int)(((long)S55$S & 0xffffffffL ^ l & 0xffffffff00000000L) & 0xffffffffL) + Block.llI) << BreakoutGame.DoubleBallBonus.$55$ & 0xffffffff00000000L ^ l2 & 0xffffffffL) & 0xffffffff00000000L) >> BreakoutGame.DoubleBallBonus.$55$);
+        return;
+    }
+
+    public int size()
+    {
+        return S55$S;
+    }
+
+    public Actor at(int i)
+    {
+        return $$$5S[i];
+    }
+
+    public Actor[] contents()
+    {
+        Actor aactor[];
+        MovingResults.toString($$$5S, BonusActor.lll, aactor = new Actor[S55$S], BonusActor.lll, S55$S);
+        return aactor;
+    }
+
+    public void sort()
+    {
+        long l;
+        long l1;
+        long l2;
+        long l4;
+        long l5;
+        long l6;
+        l6 = Ball.S$$;
+        l5 = Ball.S$$;
+        l5 = Ball.S$$;
+        l5 = Ball.S$$;
+        l5 = Ball.S$$;
+        l5 = Ball.S$$;
+        l4 = Ball.S$$;
+        long l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l2 = Ball.S$$;
+        l1 = Ball.S$$;
+        l1 = Ball.S$$;
+        l1 = Ball.S$$;
+        l1 = Ball.S$$;
+        l = Ball.S$$;
+        l = Ball.S$$;
+        l = Ball.S$$;
+        l = Ball.S$$;
+        l = Ball.S$$;
+        l = Ball.S$$;
+        l = Ball.S$$;
+        l = (long)BonusActor.lll & ImmortalBlock.III ^ l & -2L;
+        l1 = (long)((int)(((long)S55$S & 0xffffffffL ^ l3 & 0xffffffff00000000L) & 0xffffffffL) - BreakoutGame.S$55) & 0xffffffffL ^ l1 & 0xffffffff00000000L;
+          goto _L1
+_L8:
+        l6 = (long)BonusActor.lll & 0xffffffffL ^ l6 & 0xffffffff00000000L;
+          goto _L2
+_L6:
+        Actor actor;
+        l = (long)Block.llI & ImmortalBlock.III ^ l & -2L;
+        if($$$5S[(int)(l6 & 0xffffffffL)].getZOrder() <= (int)((l4 = (long)$$$5S[(int)((l2 = (long)((int)(l6 & 0xffffffffL) + Block.llI) & 0xffffffffL ^ l2 & 0xffffffff00000000L) & 0xffffffffL)].getZOrder() & 0xffffffffL ^ l4 & 0xffffffff00000000L) & 0xffffffffL))
+            continue; /* Loop/switch isn't completed */
+        actor = $$$5S[(int)(l6 & 0xffffffffL)];
+        this;
+        Paddle.I1lII;
+        JVM INSTR ifge 298;
+           goto _L3 _L4
+_L3:
+        JVM INSTR pop ;
+        break MISSING_BLOCK_LABEL_470;
+_L9:
+        throw ;
+_L4:
+        $$$5S;
+        (int)(l6 & 0xffffffffL);
+        $$$5S[(int)((l5 = (long)((int)(l6 & 0xffffffffL) + Block.llI) & 0xffffffffL ^ l5 & 0xffffffff00000000L) & 0xffffffffL)];
+        JVM INSTR aastore ;
+        $$$5S[(int)(l6 & 0xffffffffL) + Block.llI] = actor;
+        l = (long)BonusActor.lll & ImmortalBlock.III ^ l & -2L;
+        l6 = (long)(Block.llI + (int)(l6 & 0xffffffffL)) ^ l6 & 0xffffffff00000000L;
+_L2:
+        if((int)(l6 & 0xffffffffL) < (int)(l1 & 0xffffffffL)) goto _L6; else goto _L5
+_L5:
+        if((int)(l & ImmortalBlock.III) != 0)
+            return;
+        l1 = (long)(Block.SSSS + (int)(l1 & 0xffffffffL)) ^ l1 & 0xffffffff00000000L;
+_L1:
+        if((int)(l1 & 0xffffffffL) >= 0) goto _L8; else goto _L7
+_L7:
+        return;
+        null;
+          goto _L9
+    }
+
+    public ActorArray removeDead()
+    {
+        ActorArray actorarray;
+        long l;
+        long l1;
+        long l2;
+        long l3;
+        long l4;
+        l4 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l2 = Ball.S$$;
+        l1 = Ball.S$$;
+        l1 = Ball.S$$;
+        l1 = Ball.S$$;
+        l1 = Ball.S$$;
+        l1 = Ball.S$$;
+        l1 = Ball.S$$;
+        l1 = Ball.S$$;
+        l1 = Ball.S$$;
+        l1 = Ball.S$$;
+        l = Ball.S$$;
+        l = Ball.S$$;
+        l = Ball.S$$;
+        actorarray = new ActorArray();
+        l4 = (long)BonusActor.lll & 0xffffffffL ^ l4 & 0xffffffff00000000L;
+          goto _L1
+_L3:
+        l = (long)$$$5S[(int)(l4 & 0xffffffffL)].isAlive() << 36 & 0x1000000000L ^ l & 0xffffffefffffffffL;
+        if((int)((l & 0x1000000000L) >> 36) == 0)
+        {
+            actorarray.add($$$5S[(int)(l4 & 0xffffffffL)]);
+            $$$5S[(int)(l4 & 0xffffffffL)] = null;
+        }
+        l4 = (long)(Block.llI + (int)(l4 & 0xffffffffL)) ^ l4 & 0xffffffff00000000L;
+_L1:
+        if((int)(l4 & 0xffffffffL) < (int)((l = (long)S55$S & 0xffffffffL ^ l & 0xffffffff00000000L) & 0xffffffffL)) goto _L3; else goto _L2
+_L2:
+        int i;
+        i = BonusActor.lll;
+        l1 = (long)((int)(((long)S55$S & 0xffffffffL ^ l2 & 0xffffffff00000000L) & 0xffffffffL) - Block.llI) << BreakoutGame.DoubleBallBonus.$55$ & 0xffffffff00000000L ^ l1 & 0xffffffffL;
+          goto _L4
+_L8:
+        if($$$5S[i] != null)
+            continue; /* Loop/switch isn't completed */
+        do
+        {
+            if($$$5S[(int)((l1 & 0xffffffff00000000L) >> BreakoutGame.DoubleBallBonus.$55$)] == null)
+                l = (long)Block.llI << Ball.IlI1II & 0x2000000000L ^ l & 0xffffffdfffffffffL;
+            else
+                l = (long)BonusActor.lll << Ball.IlI1II & 0x2000000000L ^ l & 0xffffffdfffffffffL;
+            if(i < (int)((l1 & 0xffffffff00000000L) >> BreakoutGame.DoubleBallBonus.$55$))
+                l = (long)Block.llI << BreakoutGame.DoubleBallBonus.IIll & 0x800000000L ^ l & 0xfffffff7ffffffffL;
+            else
+                l = (long)BonusActor.lll << BreakoutGame.DoubleBallBonus.IIll & 0x800000000L ^ l & 0xfffffff7ffffffffL;
+            l = (long)((int)((l & 0x2000000000L) >> Ball.IlI1II) & (int)((l & 0x800000000L) >> BreakoutGame.DoubleBallBonus.IIll)) << BreakoutGame.NullBonus.lIll & 0x10000000000L ^ l & 0xfffffeffffffffffL;
+            if((int)((l & 0x10000000000L) >> BreakoutGame.NullBonus.lIll) != 0)
+                l1 = (long)(Block.SSSS + (int)((l1 & 0xffffffff00000000L) >> BreakoutGame.DoubleBallBonus.$55$)) << BreakoutGame.DoubleBallBonus.$55$ ^ l1 & 0xffffffffL;
+            else
+                break;
+        } while(true);
+        $$$5S[i] = $$$5S[(int)((l1 & 0xffffffff00000000L) >> BreakoutGame.DoubleBallBonus.$55$)];
+        this;
+        BreakoutGame.NullBonus.llllI;
+        JVM INSTR ifge 537;
+           goto _L5 _L6
+_L5:
+        JVM INSTR pop ;
+        break MISSING_BLOCK_LABEL_641;
+_L9:
+        throw ;
+_L6:
+        $$$5S;
+        (int)((l1 & 0xffffffff00000000L) >> BreakoutGame.DoubleBallBonus.$55$);
+        null;
+        JVM INSTR aastore ;
+        i++;
+_L4:
+        if(i < (int)((l1 & 0xffffffff00000000L) >> BreakoutGame.DoubleBallBonus.$55$)) goto _L8; else goto _L7
+_L7:
+        S55$S = (int)(((long)((int)(((long)S55$S & 0xffffffffL ^ l1 & 0xffffffff00000000L) & 0xffffffffL) - actorarray.size()) & 0xffffffffL ^ l3 & 0xffffffff00000000L) & 0xffffffffL);
+        return actorarray;
+        null;
+          goto _L9
+    }
+
+    public void clear()
+    {
+        int i;
+        S55$S = BonusActor.lll;
+        i = BonusActor.lll;
+          goto _L1
+_L4:
+        $$$5S[i] = null;
+        i++;
+_L1:
+        $$$5S;
+        ImageFixedActor.l1l1l.booleanValue();
+        JVM INSTR ifge 42;
+           goto _L2 _L3
+_L2:
+        JVM INSTR pop ;
+        break MISSING_BLOCK_LABEL_53;
+_L5:
+        throw ;
+_L3:
+        JVM INSTR arraylength .length;
+        int j;
+        j;
+        if(i >= j)
+            return;
+          goto _L4
+        null;
+          goto _L5
+    }
+
+    public String toString()
+    {
+        StringBuffer stringbuffer;
+        int i;
+        long l = Ball.S$$;
+        stringbuffer = new StringBuffer();
+        ActorIterator.next(BouncingMovementCalculator.lI11, stringbuffer);
+        ImageMovingActor.draw((int)(((long)S55$S & 0xffffffffL ^ l & 0xffffffff00000000L) & 0xffffffffL), stringbuffer);
+        i = BonusActor.lll;
+          goto _L1
+_L4:
+        ActorIterator.next(KillingFloor.S5$S, stringbuffer);
+        BonusActor.getBonus($$$5S[i], stringbuffer);
+        i++;
+_L1:
+        this;
+        S$$$5;
+        JVM INSTR ifge 88;
+           goto _L2 _L3
+_L2:
+        JVM INSTR pop ;
+        break MISSING_BLOCK_LABEL_105;
+_L5:
+        throw ;
+_L3:
+        S55$S;
+        int j;
+        j;
+        if(i >= j)
+            return Border.collisionVector(stringbuffer);
+          goto _L4
+        null;
+          goto _L5
+    }
+
+    public ActorIterator iterator()
+    {
+        return new ActorIterator();
+    }
+
+    public ActorIterator getSharedIterator()
+    {
+        ActorIterator actoriterator;
+        if(________ != null)
+            break MISSING_BLOCK_LABEL_29;
+        actoriterator = JVM INSTR new #238 <Class ActorArray$ActorIterator>;
+        actoriterator.this. ActorIterator();
+        DefaultStage.AnimationThread.ll1IIIl;
+        JVM INSTR ifge 24;
+           goto _L1 _L2
+_L1:
+        break MISSING_BLOCK_LABEL_22;
+_L2:
+        break MISSING_BLOCK_LABEL_24;
+        null;
+        throw ;
+        ________ = actoriterator;
+        ________.reset();
+        return ________;
+    }
+
+    public static String iterator(Object obj)
+    {
+        return obj.toString();
+    }
+
+    public static int main(ImageObserver imageobserver, Image image)
+    {
+        return image.getHeight(imageobserver);
+    }
+
+    public static boolean sort(Object obj, Object obj1)
+    {
+        return obj1.equals(obj);
+    }
+
+    int S55$S;
+    int S55SS;
+    Actor $$$5S[];
+    ActorIterator ________;
+    public static String $S$ = " finished at:";
+    public static boolean S$$$5 = true;
+    public static Boolean lIl11l1 = new Boolean(false);
+
+}

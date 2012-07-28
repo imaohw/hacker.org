@@ -1,0 +1,1 @@
+Open in golly and run it with the hashlife alg

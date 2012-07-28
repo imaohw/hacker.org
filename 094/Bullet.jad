@@ -1,0 +1,80 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   Bullet.java
+
+
+public class Bullet extends MovingActor
+{
+
+    public Bullet(Stage stage, int i, int j, boolean flag)
+    {
+        this;
+        stage;
+        i;
+        j;
+        Paddle.S5S;
+        LevelConstructor.S$$S;
+        if((byte)0x9771a6 % 9 == 0) goto _L2; else goto _L1
+_L1:
+        JVM INSTR pop ;
+          goto _L3
+_L4:
+        throw ;
+_L2:
+        MovingActor();
+        if(flag)
+        {
+            flag = MovingActor.l1I;
+            break MISSING_BLOCK_LABEL_45;
+        }
+        flag = BreakoutGame.GunBonus.S$5;
+        setDy(flag);
+        return;
+_L3:
+        JVM INSTR pop ;
+        JVM INSTR pop ;
+        JVM INSTR pop ;
+        JVM INSTR pop ;
+        JVM INSTR pop ;
+        null;
+          goto _L4
+    }
+
+    public void hit(Actor actor)
+    {
+        die();
+        actor instanceof Bullet;
+        if((byte)0x122c4636 % Paddle.S5S == 0) goto _L2; else goto _L1
+_L1:
+        JVM INSTR pop ;
+        break MISSING_BLOCK_LABEL_36;
+_L5:
+        throw ;
+_L2:
+        JVM INSTR ifeq 33;
+           goto _L3 _L4
+_L3:
+        break MISSING_BLOCK_LABEL_26;
+_L4:
+        break MISSING_BLOCK_LABEL_32;
+        actor.die();
+        return;
+        null;
+          goto _L5
+    }
+
+    public int collisionVector()
+    {
+        return BreakoutGame.TripleBonus.l1l1;
+    }
+
+    public static final float IlIlI = 1.077936E+09F;
+    public static final int I11I = 3;
+    public static final int III1 = 15;
+    public static float l1l = 2.5F;
+    public static String S$$$ = "Error: invalid argument for try and split xDir:";
+    public static boolean S5S$S = true;
+    public static Boolean Il1I = new Boolean(false);
+
+}

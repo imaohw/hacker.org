@@ -1,0 +1,337 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   BreakoutApplet.java
+
+import java.applet.Applet;
+import java.awt.*;
+import java.util.Hashtable;
+
+public class BreakoutApplet extends Applet
+{
+
+    public BreakoutApplet()
+    {
+        S$5S = new Label("Level:----");
+        Il11 = new Label("Lives Left:----");
+        S$SS = new Label("Blocks Left:----");
+        lIlI = new Label("Bonus:-----------------------------");
+        SS$S = BonusActor.lll;
+    }
+
+    public void init()
+    {
+        ActorArray.ActorIterator.hasNext("Breakout Applet initializing", System.out);
+        if(SS$S) goto _L2; else goto _L1
+_L1:
+        Panel panel;
+        ActorArray.ActorIterator.hasNext("Breakout version 1.0.1, programmed by Sean Bridges, www.geocities.com/sbridges.geo", System.out);
+        MovingActor.getDy(new BorderLayout(), this);
+        S$5$ = new DefaultStage();
+        Paddle.isSticky(S$5$, "Center", this);
+        panel = new Panel();
+        MovingActor.getDy(new FlowLayout(BonusActor.lll), panel);
+        ImageMovingActor.draw(S$5S, panel);
+        S$SS;
+        Paddle.S5$S5S.booleanValue();
+        JVM INSTR ifge 107;
+           goto _L3 _L4
+_L3:
+        JVM INSTR pop ;
+        break MISSING_BLOCK_LABEL_193;
+_L5:
+        throw ;
+_L4:
+        panel;
+        ImageMovingActor.draw();
+        JVM INSTR pop ;
+        ImageMovingActor.draw(Il11, panel);
+        ImageFixedActor.draw(300, MovingActor.isAlive(lIlI).height, lIlI);
+        ImageMovingActor.draw(lIlI, panel);
+        Paddle.isSticky(panel, "North", this);
+        loadImages();
+        Il1l = new BreakoutGame(S$5$, this, Il11I);
+        SS$S = Block.llI;
+_L2:
+        return;
+        null;
+          goto _L5
+    }
+
+    public void start()
+    {
+        ActorArray.ActorIterator.hasNext("Breakout Applet starting", System.out);
+        Il1l.start();
+    }
+
+    public void stop()
+    {
+        ActorArray.ActorIterator.hasNext("Breakout Applet stopping", System.out);
+        Il1l.stop();
+    }
+
+    public void loadImages()
+    {
+        String as[];
+        Rectangle arectangle[];
+        MediaTracker mediatracker;
+        long l1;
+        long l2;
+        long l3;
+        long l4;
+        long l5;
+        long l6;
+        long l7;
+        long l8;
+        long l9;
+        long l10;
+        int j = BonusActor.lll;
+        l10 = Ball.S$$;
+        l9 = Ball.S$$;
+        l9 = Ball.S$$;
+        l9 = Ball.S$$;
+        l9 = Ball.S$$;
+        l9 = Ball.S$$;
+        l9 = Ball.S$$;
+        l9 = Ball.S$$;
+        l9 = Ball.S$$;
+        l9 = Ball.S$$;
+        l9 = Ball.S$$;
+        l9 = Ball.S$$;
+        l8 = Ball.S$$;
+        l8 = Ball.S$$;
+        l8 = Ball.S$$;
+        l8 = Ball.S$$;
+        l8 = Ball.S$$;
+        l7 = Ball.S$$;
+        l6 = Ball.S$$;
+        l6 = Ball.S$$;
+        l6 = Ball.S$$;
+        l5 = Ball.S$$;
+        l4 = Ball.S$$;
+        l4 = Ball.S$$;
+        l4 = Ball.S$$;
+        l4 = Ball.S$$;
+        l4 = Ball.S$$;
+        l4 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l2 = Ball.S$$;
+        l1 = Ball.S$$;
+        l1 = Ball.S$$;
+        l1 = Ball.S$$;
+        l1 = Ball.S$$;
+        long l = Ball.S$$;
+        l = Ball.S$$;
+        ActorArray.ActorIterator.hasNext("Loading images...", System.out);
+        Object aobj[] = new String[ActorArray.ActorIterator.IIII];
+        aobj[BonusActor.lll] = "paddle.jpg";
+        aobj[Block.llI] = "ball.jpg";
+        aobj[BreakoutGame.S$55] = Ball.______;
+        aobj[Paddle.S5S] = "longPaddle.jpg";
+        aobj[BreakoutGame.TripleBonus.l1l1] = "gunPaddle.jpg";
+        aobj[BreakoutGame.DestroyerBonus.IlI] = "blue.jpg";
+        aobj[StraightLineMovementCalculator.S5$] = "green.jpg";
+        aobj[BreakoutGame.LifeBonus.S55$] = "yellow.jpg";
+        aobj[BouncingMovementCalculator.I1l1l] = "grey.jpg";
+        aobj[9] = "orange.jpg";
+        aobj[BreakoutGame.NullBonus.l1IIl] = "indigo.jpg";
+        aobj[11] = "violet.jpg";
+        aobj[BreakoutGame.NullBonus.$5S5S] = "darkGreen.jpg";
+        aobj[13] = "red.jpg";
+        aobj[14] = "black.jpg";
+        aobj[LevelConstructor.S$$S] = "immortalBlock.jpg";
+        as = ((String []) (aobj));
+        aobj = new Rectangle[ActorArray.ActorIterator.IIII];
+        Rectangle rectangle1 = JVM INSTR new #139 <Class Rectangle>;
+        rectangle1.Rectangle(StraightLineMovementCalculator.S5$, BreakoutGame.DoubleBallBonus.IIll, 73, 21);
+        aobj[BonusActor.lll] = rectangle1;
+        rectangle1 = JVM INSTR new #139 <Class Rectangle>;
+        rectangle1.Rectangle(87, BreakoutGame.NullBonus.lIll, 13, 13);
+        aobj[Block.llI] = rectangle1;
+        rectangle1 = JVM INSTR new #139 <Class Rectangle>;
+        rectangle1.Rectangle(ActorArray.ActorIterator.IIII, 235, 18, 18);
+        aobj[BreakoutGame.S$55] = rectangle1;
+        rectangle1 = JVM INSTR new #139 <Class Rectangle>;
+        rectangle1.Rectangle(BreakoutGame.LifeBonus.S55$, BreakoutGame.LifeBonus.S55$, 96, 21);
+        aobj[Paddle.S5S] = rectangle1;
+        rectangle1 = JVM INSTR new #139 <Class Rectangle>;
+        rectangle1.Rectangle(BreakoutGame.DestroyerBonus.IlI, 64, 73, 21);
+        aobj[BreakoutGame.TripleBonus.l1l1] = rectangle1;
+        rectangle1 = JVM INSTR new #139 <Class Rectangle>;
+        rectangle1.Rectangle(BreakoutGame.NullBonus.$5S5S, 99, BreakoutGame.DoubleBallBonus.IIll, MovingActor.$S$$);
+        aobj[BreakoutGame.DestroyerBonus.IlI] = rectangle1;
+        rectangle1 = JVM INSTR new #139 <Class Rectangle>;
+        rectangle1.Rectangle(50, 118, BreakoutGame.DoubleBallBonus.IIll, MovingActor.$S$$);
+        aobj[StraightLineMovementCalculator.S5$] = rectangle1;
+        rectangle1 = JVM INSTR new #139 <Class Rectangle>;
+        rectangle1.Rectangle(BreakoutGame.NullBonus.$5S5S, 196, BreakoutGame.DoubleBallBonus.IIll, MovingActor.$S$$);
+        aobj[BreakoutGame.LifeBonus.S55$] = rectangle1;
+        rectangle1 = JVM INSTR new #139 <Class Rectangle>;
+        rectangle1.Rectangle(BreakoutGame.NullBonus.$5S5S, 137, BreakoutGame.DoubleBallBonus.IIll, MovingActor.$S$$);
+        aobj[BouncingMovementCalculator.I1l1l] = rectangle1;
+        aobj[9] = new Rectangle(50, 157, BreakoutGame.DoubleBallBonus.IIll, MovingActor.$S$$);
+        rectangle1 = JVM INSTR new #139 <Class Rectangle>;
+        rectangle1.Rectangle(BreakoutGame.NullBonus.$5S5S, 157, BreakoutGame.DoubleBallBonus.IIll, MovingActor.$S$$);
+        aobj[BreakoutGame.NullBonus.l1IIl] = rectangle1;
+        aobj[11] = new Rectangle(50, 176, BreakoutGame.DoubleBallBonus.IIll, MovingActor.$S$$);
+        rectangle1 = JVM INSTR new #139 <Class Rectangle>;
+        rectangle1.Rectangle(BreakoutGame.NullBonus.$5S5S, 118, BreakoutGame.DoubleBallBonus.IIll, MovingActor.$S$$);
+        aobj[BreakoutGame.NullBonus.$5S5S] = rectangle1;
+        aobj[13] = new Rectangle(BreakoutGame.NullBonus.$5S5S, 176, BreakoutGame.DoubleBallBonus.IIll, MovingActor.$S$$);
+        aobj[14] = new Rectangle(50, 99, BreakoutGame.DoubleBallBonus.IIll, MovingActor.$S$$);
+        rectangle1 = JVM INSTR new #139 <Class Rectangle>;
+        rectangle1.Rectangle(50, 137, BreakoutGame.DoubleBallBonus.IIll, MovingActor.$S$$);
+        aobj[LevelConstructor.S$$S] = rectangle1;
+        arectangle = ((Rectangle []) (aobj));
+        mediatracker = new MediaTracker(this);
+        ImageFixedActor.draw(FixedActor.isBackground(this), "images.png", this);
+        BonusActor.S$5S$;
+        JVM INSTR ifge 827;
+           goto _L1 _L2
+_L1:
+        JVM INSTR pop ;
+          goto _L3
+_L9:
+        throw ;
+_L2:
+        java.awt.Image image;
+        image;
+          goto _L4
+_L10:
+        if(k != 0) goto _L6; else goto _L5
+_L6:
+        null;
+_L5:
+        JVM INSTR pop ;
+        if(BreakoutGame.StickyBonus.S5S$5.booleanValue() != DefaultStage.III1l)
+            k += 3;
+        ActorArray.ActorIterator.reset(mediatracker);
+        ActorArray.ActorIterator.hasNext("Images loaded", System.out);
+        if(false) goto _L8; else goto _L7
+_L8:
+        ActorArray.ActorIterator.hasNext("Could not load images", System.err);
+        System.err;
+        ActorArray.ActorIterator.reset();
+        init();
+_L7:
+        frame = new Frame();
+        MovingActor.intersects(frame);
+        if(Il11I == null)
+        {
+            Il11I = new Hashtable();
+            for(int i = BonusActor.lll; i < (int)((l9 = (long)as.length & 0xffffffffL ^ l9 & 0xffffffff00000000L) & 0xffffffffL); i++)
+            {
+                Rectangle rectangle = arectangle[i];
+                l1 = (long)rectangle.width & 0xffffffffL ^ l1 & 0xffffffff00000000L;
+                java.awt.Image image1 = BouncingMovementCalculator.move((int)(l1 & 0xffffffffL), (int)(((l7 = (long)rectangle.height << BreakoutGame.DoubleBallBonus.$55$ & 0xffffffff00000000L ^ l7 & 0xffffffffL) & 0xffffffff00000000L) >> BreakoutGame.DoubleBallBonus.$55$), frame);
+                java.awt.Graphics g = Paddle.isSticky(image1);
+                l2 = (long)rectangle.width & 0xffffffffL ^ l2 & 0xffffffff00000000L;
+                l7 = (long)rectangle.height & 0xffffffffL ^ l7 & 0xffffffff00000000L;
+                l10 = (long)rectangle.x & 0xffffffffL ^ l10 & 0xffffffff00000000L;
+                l4 = (long)rectangle.y & 0xffffffffL ^ l4 & 0xffffffff00000000L;
+                l3 = (long)rectangle.x & 0xffffffffL ^ l3 & 0xffffffff00000000L;
+                l6 = (long)rectangle.width & 0xffffffffL ^ l6 & 0xffffffff00000000L;
+                l5 = (long)((int)(l3 & 0xffffffffL) + (int)(l6 & 0xffffffffL)) & 0xffffffffL ^ l5 & 0xffffffff00000000L;
+                l3 = (long)(rectangle.y + (int)((l8 = (long)rectangle.height & 0xffffffffL ^ l8 & 0xffffffff00000000L) & 0xffffffffL)) << BreakoutGame.DoubleBallBonus.$55$ & 0xffffffff00000000L ^ l3 & 0xffffffffL;
+                BreakoutGame.blockDied(image, BonusActor.lll, BonusActor.lll, (int)(l2 & 0xffffffffL), (int)(l7 & 0xffffffffL), (int)(l10 & 0xffffffffL), (int)(l4 & 0xffffffffL), (int)(l5 & 0xffffffffL), (int)((l3 & 0xffffffff00000000L) >> BreakoutGame.DoubleBallBonus.$55$), this, g);
+                BreakoutGame.decodeLevel(as[i], image1, Il11I);
+            }
+
+        }
+        ImageMovingActor.draw(frame);
+        return;
+_L3:
+        null;
+          goto _L9
+_L4:
+        Frame frame;
+        int k;
+        KillingFloor.hit(image, BonusActor.lll, mediatracker);
+        k = BonusActor.lll;
+        null;
+          goto _L10
+    }
+
+    public String getAppletInfo()
+    {
+        return "Breakout version 1.0.1, programmed by Sean Bridges, www.geocities.com/sbridges.geo";
+    }
+
+    public boolean mouseDown(Event event, int i, int j)
+    {
+        FixedActor.getZOrder(this);
+        return BonusActor.lll;
+    }
+
+    public boolean keyDown(Event event, int i)
+    {
+        Il1l.keyPressed(i);
+        return BonusActor.lll;
+    }
+
+    public boolean keyUp(Event event, int i)
+    {
+        Il1l.keyReleased(i);
+        return BonusActor.lll;
+    }
+
+    public void setLivesLeft(int i)
+    {
+        this = Il11;
+        LevelConstructor.toBool(Border.collisionVector(ImageMovingActor.draw(i, new StringBuffer(StraightLineMovementCalculator.S5$5))), this);
+    }
+
+    public void setBlocksLeft(int i)
+    {
+        this = S$SS;
+        LevelConstructor.toBool(Border.collisionVector(ImageMovingActor.draw(i, new StringBuffer(BreakoutGame.StickyBonus.I1I1l))), this);
+    }
+
+    public void setLevel(int i)
+    {
+        Label label = S$5S;
+        this = JVM INSTR new #416 <Class StringBuffer>;
+        super(MovingActor.IIl);
+        LevelConstructor.toBool(Border.collisionVector(ImageMovingActor.draw(i + Block.llI, this)), label);
+    }
+
+    public void setBonus(String s)
+    {
+        this = lIlI;
+        LevelConstructor.toBool(Border.collisionVector(ActorArray.ActorIterator.next(s, new StringBuffer(ImageMovingActor.S55))), this);
+    }
+
+    public static void main(String args[])
+    {
+        BreakoutApplet breakoutapplet = new BreakoutApplet();
+        breakoutapplet.init();
+        breakoutapplet.start();
+    }
+
+    public static void init(Throwable throwable)
+    {
+        throwable.printStackTrace();
+    }
+
+    public static Boolean keyUp(String s)
+    {
+        return Boolean.valueOf(s);
+    }
+
+    public static final String l11l = "Breakout version 1.0.1, programmed by Sean Bridges, www.geocities.com/sbridges.geo";
+    BreakoutGame Il1l;
+    DefaultStage S$5$;
+    Hashtable Il11I;
+    Label S$5S;
+    Label Il11;
+    Label S$SS;
+    Label lIlI;
+    boolean SS$S;
+    public static float $$S = 0.2F;
+    public static Boolean II1I = new Boolean(true);
+    public static boolean S$5$$S;
+
+}

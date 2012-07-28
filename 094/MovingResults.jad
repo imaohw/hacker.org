@@ -1,0 +1,60 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   MovingResults.java
+
+import java.awt.Rectangle;
+import java.io.PrintStream;
+import java.util.Random;
+
+public class MovingResults
+{
+
+    public MovingResults()
+    {
+    }
+
+    public String toString()
+    {
+        StringBuffer stringbuffer = JVM INSTR new #83  <Class StringBuffer>;
+        stringbuffer.StringBuffer(DestroyerMovementCalculator.II11II);
+        stringbuffer = ImageMovingActor.draw(I11ll, stringbuffer);
+        stringbuffer = ActorArray.ActorIterator.next(ActorArray.$S$, stringbuffer);
+        return Border.collisionVector(BonusActor.getBonus(l11Il, stringbuffer));
+    }
+
+    public static float toString(Random random)
+    {
+        return random.nextFloat();
+    }
+
+    public static void toString(Rectangle rectangle, Rectangle rectangle1)
+    {
+        rectangle1.setBounds(rectangle);
+    }
+
+    public static void toString(Rectangle rectangle, Rectangle rectangle1, BouncingMovementCalculator bouncingmovementcalculator)
+    {
+        rectangle1.add(rectangle);
+    }
+
+    public static void toString(int i, PrintStream printstream)
+    {
+        printstream.println(i);
+    }
+
+    public static void toString(Object obj, int i, Object obj1, int j, int k)
+    {
+        System.arraycopy(obj, i, obj1, j, k);
+    }
+
+    public static final int lIlll = 1;
+    public static final int S55S = 2;
+    public static final int $$$5 = 4;
+    public int I11ll;
+    public Rectangle l11Il;
+    public static int I1I1 = 20;
+    public static boolean lIIlI = true;
+    public static Boolean $$$$ = new Boolean(false);
+
+}

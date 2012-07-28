@@ -1,0 +1,74 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   Block.java
+
+import java.awt.Image;
+import java.awt.Rectangle;
+import java.awt.image.ImageObserver;
+
+public class Block extends ImageFixedActor
+{
+
+    public Block(BreakoutGame breakoutgame, Stage stage, Image image, ImageObserver imageobserver, int i, int j)
+    {
+        super(image, imageobserver, i, j);
+        Il1l = breakoutgame;
+        S$5$ = stage;
+    }
+
+    public void hit(Actor actor)
+    {
+        if(!(actor instanceof Bullet))
+            break MISSING_BLOCK_LABEL_25;
+        if((byte)0x6ac86ae5 % Paddle.S5S == 0)
+            break MISSING_BLOCK_LABEL_19;
+        null;
+        throw ;
+        actor.die();
+        die();
+        return;
+    }
+
+    public void die()
+    {
+        BreakoutGame breakoutgame;
+        long l;
+        l = Ball.S$$;
+        l = (long)isAlive() & ImmortalBlock.III ^ l & -2L;
+        if((int)(l & ImmortalBlock.III) == 0)
+            break MISSING_BLOCK_LABEL_87;
+        breakoutgame = Il1l;
+        FixedActor.ll1Il.booleanValue();
+        JVM INSTR ifge 45;
+           goto _L1 _L2
+_L1:
+        break MISSING_BLOCK_LABEL_43;
+_L2:
+        break MISSING_BLOCK_LABEL_45;
+        null;
+        throw ;
+        breakoutgame.blockDied((int)((((long)super.SS555.x << Paddle.S5S & 0x7fffffff8L ^ l & 0xfffffff800000007L) & 0x7fffffff8L) >> Paddle.S5S), super.SS555.y);
+        super.die();
+        return;
+    }
+
+    public int collisionVector()
+    {
+        return BreakoutGame.DestroyerBonus.IlI;
+    }
+
+    public static int hit(ImageObserver imageobserver, Image image)
+    {
+        return image.getWidth(imageobserver);
+    }
+
+    private BreakoutGame Il1l;
+    private Stage S$5$;
+    public static String $$SS$ = "immortalBlock";
+    public static int llI = 1;
+    public static int SSSS = -1;
+    public static Boolean S$555 = new Boolean(true);
+    public static boolean lIlIlI;
+
+}

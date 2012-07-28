@@ -1,0 +1,71 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   Border.java
+
+import java.awt.*;
+
+public class Border extends FixedActor
+{
+
+    public Border(int i, int j, int k, int l)
+    {
+        super(i, j, k, l);
+    }
+
+    public int collisionVector()
+    {
+        return BreakoutGame.LifeBonus.S55$;
+    }
+
+    public void hit(Actor actor)
+    {
+        if(!(actor instanceof Bullet)) goto _L2; else goto _L1
+_L1:
+        actor;
+        ll1lIl;
+        JVM INSTR ifge 19;
+           goto _L3 _L4
+_L3:
+        JVM INSTR pop ;
+        break MISSING_BLOCK_LABEL_28;
+_L5:
+        throw ;
+_L4:
+        die();
+_L2:
+        return;
+        null;
+          goto _L5
+    }
+
+    public static String collisionVector(StringBuffer stringbuffer)
+    {
+        return stringbuffer.toString();
+    }
+
+    public static char collisionVector(char c)
+    {
+        return Character.toLowerCase(c);
+    }
+
+    public static Rectangle hit(Component component)
+    {
+        return component.getBounds();
+    }
+
+    public static Graphics collisionVector(Component component)
+    {
+        return component.getGraphics();
+    }
+
+    public static final Class hit(Object obj)
+    {
+        return obj.getClass();
+    }
+
+    public static float ____ = 26F;
+    public static boolean ll1lIl = true;
+    public static Boolean S$$$$ = new Boolean(false);
+
+}

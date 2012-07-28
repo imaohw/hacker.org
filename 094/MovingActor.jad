@@ -1,0 +1,331 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   MovingActor.java
+
+import java.awt.*;
+import java.util.Vector;
+
+public class MovingActor
+    implements Actor
+{
+
+    public MovingActor(Stage stage, int i, int j, int k, int l)
+    {
+        SS55 = new Rectangle();
+        S$$5$ = DefaultStage.AnimationThread.IIl1;
+        II11 = DefaultStage.AnimationThread.IIl1;
+        S5$S5 = DefaultStage.AnimationThread.IIl1;
+        llI1 = DefaultStage.AnimationThread.IIl1;
+        S$$SS5S = DefaultStage.AnimationThread.IIl1;
+        l1Il = DefaultStage.AnimationThread.IIl1;
+        I1Il1 = Block.llI;
+        l1II = BonusActor.lll;
+        l1ll1 = Block.llI;
+        I1l1I = new StraightLineMovementCalculator();
+        S$5$ = stage;
+        S$S$$$ = new Rectangle(i, j, k, l);
+        lI1I = new Rectangle(i, j, BonusActor.lll, BonusActor.lll);
+    }
+
+    public void setMovementCalculator(MovementCalculator movementcalculator)
+    {
+        I1l1I = movementcalculator;
+    }
+
+    public void setVelocity(float f, float f1)
+    {
+        setDx(f);
+        setDy(f1);
+    }
+
+    public float absValOfDecimal(float f)
+    {
+        return StraightLineMovementCalculator.main((float)(int)f - f);
+    }
+
+    public void setDx(float f)
+    {
+        S5$S5 = absValOfDecimal(f);
+        S$$SS5S = DefaultStage.AnimationThread.IIl1;
+        S$$5$ = f;
+    }
+
+    public float getDx()
+    {
+        return S$$5$;
+    }
+
+    public void setDy(float f)
+    {
+        llI1 = absValOfDecimal(f);
+        l1Il = DefaultStage.AnimationThread.IIl1;
+        II11 = f;
+    }
+
+    public float getDy()
+    {
+        return II11;
+    }
+
+    public void setBounds(Rectangle rectangle)
+    {
+        MovingResults.toString(rectangle, S$S$$$);
+        I1Il1 = Block.llI;
+    }
+
+    public void translate(int i, int j)
+    {
+        MovingResults.toString(lI1I, SS55);
+        MovingResults.toString(S$S$$$, SS55, (BouncingMovementCalculator)null);
+        MovingResults.toString(S$S$$$, lI1I);
+        LevelConstructor.loadLevel(i, j, S$S$$$);
+        MovingResults.toString(S$S$$$, SS55, (BouncingMovementCalculator)null);
+        l1II = Block.llI;
+        I1Il1 = Block.llI;
+    }
+
+    public void setBounds(int i, int j, int k, int l)
+    {
+        MovingResults.toString(lI1I, SS55);
+        MovingResults.toString(S$S$$$, SS55, (BouncingMovementCalculator)null);
+        MovingResults.toString(S$S$$$, lI1I);
+        ImmortalBlock.collisionVector(i, j, k, l, S$S$$$);
+        MovingResults.toString(S$S$$$, SS55, (BouncingMovementCalculator)null);
+        l1II = Block.llI;
+        I1Il1 = Block.llI;
+    }
+
+    public float center()
+    {
+        return (float)S$S$$$.x + (float)S$S$$$.width / KillingFloor.lIl1;
+    }
+
+    public float distanceFromStageCenter()
+    {
+        Rectangle rectangle = S$5$.getStageBounds();
+        this = center();
+        float f = rectangle.x;
+        float f1 = (float)rectangle.width / KillingFloor.lIl1;
+        return this - (f - f1);
+    }
+
+    public final boolean isBackground()
+    {
+        return BonusActor.lll;
+    }
+
+    public void move()
+    {
+        BouncingMovementCalculator bouncingmovementcalculator;
+        BouncingMovementCalculator bouncingmovementcalculator1;
+        long l;
+        long l1;
+        long l2;
+        long l3;
+        long l4;
+        l4 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l2 = Ball.S$$;
+        l2 = Ball.S$$;
+        l1 = Ball.S$$;
+        l1 = Ball.S$$;
+        l = Ball.S$$;
+        bouncingmovementcalculator1 = (BouncingMovementCalculator)null;
+        bouncingmovementcalculator = (BouncingMovementCalculator)null;
+        l = (long)l1II << 57 & 0x200000000000000L ^ l & 0xfdffffffffffffffL;
+        if((int)((l & 0x200000000000000L) >> 57) != 0)
+        {
+            l = (long)BonusActor.lll << 59 & 0x800000000000000L ^ l & 0xf7ffffffffffffffL;
+            break MISSING_BLOCK_LABEL_127;
+        }
+        l = (long)Block.llI << 59 & 0x800000000000000L ^ l & 0xf7ffffffffffffffL;
+        l1 = (long)(S$$5$ != DefaultStage.AnimationThread.IIl1) << 54 & 0x3fc0000000000000L ^ l1 & 0xc03fffffffffffffL;
+        if((byte)(int)((l1 & 0x3fc0000000000000L) >> 54) != 0)
+            l = (long)Block.llI << 63 & 0x8000000000000000L ^ l & 0x7fffffffffffffffL;
+        else
+            l = (long)BonusActor.lll << 63 & 0x8000000000000000L ^ l & 0x7fffffffffffffffL;
+        if((byte)(int)(((long)(II11 != DefaultStage.AnimationThread.IIl1) & 255L ^ l2 & -256L) & 255L) != 0)
+            l = (long)Block.llI << 56 & 0x100000000000000L ^ l & 0xfeffffffffffffffL;
+        else
+            l = (long)BonusActor.lll << 56 & 0x100000000000000L ^ l & 0xfeffffffffffffffL;
+        l1 = (long)((int)((l & 0x800000000000000L) >> 59) & (int)(((l1 = (long)((int)((l & 0x8000000000000000L) >> 63) | (int)((l & 0x100000000000000L) >> 56)) << 62 & 0x4000000000000000L ^ l1 & 0xbfffffffffffffffL) & 0x4000000000000000L) >> 62)) << 53 & 0x20000000000000L ^ l1 & 0xffdfffffffffffffL;
+        if((int)((l1 & 0x20000000000000L) >> 53) == 0) goto _L2; else goto _L1
+_L1:
+        int i = (int)S$$5$;
+        bouncingmovementcalculator = (int)II11;
+        S$$SS5S = S$$SS5S + S5$S5;
+        l1Il = l1Il + llI1;
+        l1 = (long)(S$$SS5S != ImageMovingActor.$5S5) << 43 & 0x7f80000000000L ^ l1 & 0xfff807ffffffffffL;
+        if((byte)(int)((l1 & 0x7f80000000000L) >> 43) >= 0)
+        {
+            S$$SS5S = S$$SS5S - ImageMovingActor.$5S5;
+            l = (long)(S$$5$ != DefaultStage.AnimationThread.IIl1) & 255L ^ l & -256L;
+            if((byte)(int)(l & 255L) > 0)
+                i++;
+            else
+                i--;
+        }
+        l1 = (long)(l1Il != ImageMovingActor.$5S5) << BreakoutGame.DoubleBallBonus.IIll & 0x7f800000000L ^ l1 & 0xfffff807ffffffffL;
+        if((byte)(int)((l1 & 0x7f800000000L) >> BreakoutGame.DoubleBallBonus.IIll) >= 0)
+        {
+            l1Il = l1Il - ImageMovingActor.$5S5;
+            l = (long)(II11 != DefaultStage.AnimationThread.IIl1) << 48 & 0xff000000000000L ^ l & 0xff00ffffffffffffL;
+            if((byte)(int)((l & 0xff000000000000L) >> 48) > 0)
+                bouncingmovementcalculator++;
+            else
+                bouncingmovementcalculator--;
+        }
+        I1Il1 = Block.llI;
+        MovingResults.toString(S$S$$$, lI1I);
+        bouncingmovementcalculator = I1l1I.move(S$5$, this, lI1I, S$S$$$, i, bouncingmovementcalculator);
+        S$S$$$ = ((MovingResults) (bouncingmovementcalculator)).l11Il;
+        if((int)(((long)((int)(((long)((MovingResults) (bouncingmovementcalculator)).I11ll & 0xffffffffL ^ l1 & 0xffffffff00000000L) & 0xffffffffL) & Block.llI) & 0xffffffffL ^ l4 & 0xffffffff00000000L) & 0xffffffffL) != 0)
+            S$$5$ = -S$$5$;
+        if((int)((((long)((int)(((long)((MovingResults) (bouncingmovementcalculator)).I11ll & 0xffffffffL ^ l3 & 0xffffffff00000000L) & 0xffffffffL) & BreakoutGame.S$55) << 13 & 0x1fffffffe000L ^ l & 0xffffe00000001fffL) & 0x1fffffffe000L) >> 13) == 0) goto _L4; else goto _L3
+_L3:
+        II11;
+        if((byte)0x72b0de2d % 9 == 0) goto _L6; else goto _L5
+_L5:
+        JVM INSTR pop ;
+        break MISSING_BLOCK_LABEL_979;
+_L8:
+        throw ;
+_L6:
+        JVM INSTR fneg ;
+        bouncingmovementcalculator;
+        II11 = bouncingmovementcalculator;
+_L4:
+        MovingResults.toString(lI1I, SS55);
+        MovingResults.toString(S$S$$$, SS55, bouncingmovementcalculator1);
+          goto _L7
+_L2:
+        l = (long)l1II << 58 & 0x400000000000000L ^ l & 0xfbffffffffffffffL;
+        if((int)((l & 0x400000000000000L) >> 58) != 0)
+            l1II = BonusActor.lll;
+        else
+        if((int)((((long)BonusActor.hit(S$S$$$, lI1I) << 9 & 512L ^ l & -513L) & 512L) >> 9) == 0)
+        {
+            I1Il1 = Block.llI;
+            MovingResults.toString(S$S$$$, lI1I);
+            MovingResults.toString(lI1I, SS55);
+            MovingResults.toString(S$S$$$, SS55, bouncingmovementcalculator);
+        } else
+        {
+            I1Il1 = BonusActor.lll;
+        }
+_L7:
+        return;
+        null;
+          goto _L8
+    }
+
+    public boolean hasDirty()
+    {
+        return I1Il1;
+    }
+
+    public Rectangle getDirtyRectangle()
+    {
+        return SS55;
+    }
+
+    public Rectangle getBounds()
+    {
+        return S$S$$$;
+    }
+
+    public boolean intersects(Rectangle rectangle)
+    {
+        return ImageFixedActor.draw(rectangle, S$S$$$);
+    }
+
+    public void hit(Actor actor)
+    {
+    }
+
+    public boolean isAlive()
+    {
+        return l1ll1;
+    }
+
+    public void die()
+    {
+        l1ll1 = BonusActor.lll;
+        I1Il1 = Block.llI;
+    }
+
+    public void draw(Graphics g)
+    {
+        long l = Ball.S$$;
+        l = Ball.S$$;
+        l = Ball.S$$;
+        l = Ball.S$$;
+        l = Ball.S$$;
+        l = Ball.S$$;
+        l = Ball.S$$;
+        l = Ball.S$$;
+        LevelConstructor.toBool(S$S$$$.x, (int)(((l = (long)S$S$$$.height & 0xffffffffL ^ ((long)S$S$$$.y << BreakoutGame.DoubleBallBonus.$55$ & 0xffffffff00000000L ^ Ball.S$$ & 0xffffffffL) & 0xffffffff00000000L) & 0xffffffff00000000L) >> BreakoutGame.DoubleBallBonus.$55$), (int)(((long)S$S$$$.width & 0xffffffffL ^ Ball.S$$ & 0xffffffff00000000L) & 0xffffffffL), (int)(l & 0xffffffffL), g);
+    }
+
+    public int getZOrder()
+    {
+        return BonusActor.lll;
+    }
+
+    public String toString()
+    {
+        StringBuffer stringbuffer = JVM INSTR new #337 <Class StringBuffer>;
+        stringbuffer.StringBuffer(StraightLineMovementCalculator.SS5);
+        stringbuffer = BonusActor.getBonus(S$S$$$, stringbuffer);
+        stringbuffer = ActorArray.ActorIterator.next(BonusActor.S$55S$, stringbuffer);
+        return Border.collisionVector(BonusActor.getBonus(lI1I, stringbuffer));
+    }
+
+    public int collisionVector()
+    {
+        return Block.llI;
+    }
+
+    public static void intersects(Vector vector)
+    {
+        vector.removeAllElements();
+    }
+
+    public static Dimension isAlive(Component component)
+    {
+        return component.getSize();
+    }
+
+    public static void getDy(LayoutManager layoutmanager, Container container)
+    {
+        container.setLayout(layoutmanager);
+    }
+
+    public static void intersects(Frame frame)
+    {
+        frame.addNotify();
+    }
+
+    protected Rectangle S$S$$$;
+    protected Rectangle lI1I;
+    protected Rectangle SS55;
+    protected float S$$5$;
+    protected float II11;
+    protected float S5$S5;
+    protected float llI1;
+    protected float S$$SS5S;
+    protected float l1Il;
+    protected boolean I1Il1;
+    protected boolean l1II;
+    protected boolean l1ll1;
+    protected Stage S$5$;
+    protected MovementCalculator I1l1I;
+    public static float l1I = 3F;
+    public static String IIl = "Level:";
+    public static int $S$$ = 17;
+    public static Boolean I1lI = new Boolean(true);
+    public static boolean $S$5;
+
+}

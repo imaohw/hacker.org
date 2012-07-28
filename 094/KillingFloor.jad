@@ -1,0 +1,53 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   KillingFloor.java
+
+import java.awt.Image;
+import java.awt.MediaTracker;
+
+public class KillingFloor extends FixedActor
+{
+
+    public KillingFloor(int i, int j, int k, int l)
+    {
+        super(i, j, k, l);
+    }
+
+    public void hit(Actor actor)
+    {
+        actor.die();
+    }
+
+    public int collisionVector()
+    {
+        return BreakoutGame.LifeBonus.S55$;
+    }
+
+    public static final void hit(int i, Thread thread)
+    {
+        thread.setPriority(i);
+    }
+
+    public static void hit(int i, StringBuffer stringbuffer)
+    {
+        stringbuffer.setLength(i);
+    }
+
+    public static void hit(Image image, int i, MediaTracker mediatracker)
+    {
+        mediatracker.addImage(image, i);
+    }
+
+    public static final void hit(Object obj)
+    {
+        obj.notify();
+    }
+
+    public static float lIl1 = 2.0F;
+    public static String $5$S = "Double Ball Bonus";
+    public static String S5$S = "     ";
+    public static Boolean lIll1 = new Boolean(true);
+    public static boolean lllll;
+
+}

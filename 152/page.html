@@ -1,0 +1,74 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<style type="text/css">
+<!--
+body {
+clear: both;
+text-align: center;
+font-family: Arial;
+font-size: 16px;
+background-image: url(bckg.png); 
+background-repeat: repeat; 
+background-position: 0px 0px; 
+
+}
+
+img {
+position:absolute;
+top: 15px;
+left: 0px;
+margin-top: 2px;
+}
+
+div {
+position:absolute;
+top: 35px;
+left: 35px;
+}
+    
+    -->
+    </style>
+    <script type="text/javascript" >
+    var foo = null; 
+    var topLoc = 25;
+    var move = 2;
+    var curline = 1;
+    var posx = 0;
+    var posy = 0;
+    var dir = 1 ;
+    function c() {
+      document.body.style.backgroundPosition = posx +'px ' + posy +'px';
+        posx = (posx - 1) % 240 ;
+          posy = (posy + dir * Math.floor(Math.random()*2)) % 240 ;
+            dir = -dir ;
+            }
+
+            function a() {
+              for (i=1; i <=7; i++ ) {
+                  document.write("<img src='" + i + ".png' id='id" + i + "'/>");
+                    }
+                    }
+                    function b() {
+                      for (i=1; i <=7; i++ ) {
+                        foo = document.getElementById('id'+i); 
+                            foo.style.top = topLoc + 'px'; 
+                                topLoc = topLoc + move
+                                  }
+                                  }
+
+
+                                  </script>
+                                  <head>
+                                  <body>
+                                  <div>
+                                  the answer, my friend, is 
+                                  <script type="text/javascript">
+                                  a();
+                                  b();
+                                  setInterval("c()",20);
+                                  </script>
+                                  </div>
+
+                                  </body>
+                                  </html>

@@ -1,0 +1,338 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   BouncingMovementCalculator.java
+
+import java.awt.*;
+import java.util.Enumeration;
+
+public class BouncingMovementCalculator
+    implements MovementCalculator
+{
+
+    public BouncingMovementCalculator()
+    {
+    }
+
+    public MovingResults move(Stage stage, MovingActor movingactor, Rectangle rectangle, Rectangle rectangle1, int i, int j)
+    {
+        MovingResults movingresults;
+        long l;
+        long l1;
+        long l2;
+        long l3;
+        long l4;
+        long l5;
+        long l6;
+        long l7;
+        long l8;
+        long l9;
+        long l10;
+        long l11;
+        long l12;
+        long l13;
+        long l14;
+        long l15;
+        long l16;
+        long l17;
+        long l18;
+        long l19;
+        long l21;
+        long l22;
+        long l23;
+        long l24;
+        long l25;
+        long l26;
+        long l27;
+        long l28;
+        long l29;
+        long l30;
+        l30 = Ball.S$$;
+        l29 = Ball.S$$;
+        l28 = Ball.S$$;
+        l28 = Ball.S$$;
+        l28 = Ball.S$$;
+        l27 = Ball.S$$;
+        l27 = Ball.S$$;
+        l26 = Ball.S$$;
+        l26 = Ball.S$$;
+        l26 = Ball.S$$;
+        l25 = Ball.S$$;
+        l25 = Ball.S$$;
+        l25 = Ball.S$$;
+        l25 = Ball.S$$;
+        l25 = Ball.S$$;
+        l25 = Ball.S$$;
+        l25 = Ball.S$$;
+        l25 = Ball.S$$;
+        l25 = Ball.S$$;
+        l25 = Ball.S$$;
+        l25 = Ball.S$$;
+        l25 = Ball.S$$;
+        l25 = Ball.S$$;
+        l24 = Ball.S$$;
+        l23 = Ball.S$$;
+        l23 = Ball.S$$;
+        l22 = Ball.S$$;
+        l22 = Ball.S$$;
+        l22 = Ball.S$$;
+        l21 = Ball.S$$;
+        l21 = Ball.S$$;
+        l21 = Ball.S$$;
+        l21 = Ball.S$$;
+        l21 = Ball.S$$;
+        long l20 = Ball.S$$;
+        l20 = Ball.S$$;
+        l20 = Ball.S$$;
+        l20 = Ball.S$$;
+        l19 = Ball.S$$;
+        l19 = Ball.S$$;
+        l19 = Ball.S$$;
+        l19 = Ball.S$$;
+        l18 = Ball.S$$;
+        l18 = Ball.S$$;
+        l18 = Ball.S$$;
+        l18 = Ball.S$$;
+        l17 = Ball.S$$;
+        l17 = Ball.S$$;
+        l17 = Ball.S$$;
+        l17 = Ball.S$$;
+        l17 = Ball.S$$;
+        l17 = Ball.S$$;
+        l17 = Ball.S$$;
+        l16 = Ball.S$$;
+        l15 = Ball.S$$;
+        l15 = Ball.S$$;
+        l15 = Ball.S$$;
+        l15 = Ball.S$$;
+        l15 = Ball.S$$;
+        l15 = Ball.S$$;
+        l15 = Ball.S$$;
+        l15 = Ball.S$$;
+        l15 = Ball.S$$;
+        l15 = Ball.S$$;
+        l15 = Ball.S$$;
+        l14 = Ball.S$$;
+        l14 = Ball.S$$;
+        l14 = Ball.S$$;
+        l14 = Ball.S$$;
+        l14 = Ball.S$$;
+        l13 = Ball.S$$;
+        l13 = Ball.S$$;
+        l12 = Ball.S$$;
+        l10 = Ball.S$$;
+        l10 = Ball.S$$;
+        l10 = Ball.S$$;
+        l10 = Ball.S$$;
+        l9 = Ball.S$$;
+        l8 = Ball.S$$;
+        l8 = Ball.S$$;
+        l8 = Ball.S$$;
+        l8 = Ball.S$$;
+        l8 = Ball.S$$;
+        l8 = Ball.S$$;
+        l8 = Ball.S$$;
+        l8 = Ball.S$$;
+        l7 = Ball.S$$;
+        l6 = Ball.S$$;
+        l6 = Ball.S$$;
+        l6 = Ball.S$$;
+        l6 = Ball.S$$;
+        l6 = Ball.S$$;
+        l5 = Ball.S$$;
+        l5 = Ball.S$$;
+        l5 = Ball.S$$;
+        l4 = Ball.S$$;
+        l4 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l3 = Ball.S$$;
+        l2 = Ball.S$$;
+        l2 = Ball.S$$;
+        l1 = Ball.S$$;
+        l1 = Ball.S$$;
+        l = Ball.S$$;
+        l4 = (long)i & 0xffffffffL ^ Ball.S$$ & 0xffffffff00000000L;
+        l11 = (long)j & 0xffffffffL ^ Ball.S$$ & 0xffffffff00000000L;
+        l = (long)BreakoutGame.addBlock(j) << BreakoutGame.NullBonus.l1IIl & 0x3fffffffc00L ^ l & 0xfffffc00000003ffL;
+        l17 = (long)((int)(((long)BreakoutGame.addBlock(i) & 0xffffffffL ^ l20 & 0xffffffff00000000L) & 0xffffffffL) + (int)((l & 0x3fffffffc00L) >> BreakoutGame.NullBonus.l1IIl)) & 0xffffffffL ^ l17 & 0xffffffff00000000L;
+        l23 = (long)BonusActor.lll & 0xffffffffL ^ l23 & 0xffffffff00000000L;
+        l16 = (long)BonusActor.lll & 0xffffffffL ^ l16 & 0xffffffff00000000L;
+        l7 = (long)BonusActor.lll & 0xffffffffL ^ l7 & 0xffffffff00000000L;
+        rectangle1 = new MovingResults();
+        movingresults = null;
+        rectangle = new Rectangle(rectangle);
+        l27 = (long)BonusActor.lll & 0xffffffffL ^ l27 & 0xffffffff00000000L;
+          goto _L1
+_L6:
+        Rectangle rectangle2;
+        movingresults = moveTemp(stage, movingactor, rectangle, (int)(l4 & 0xffffffffL), (int)(l11 & 0xffffffffL));
+        rectangle2 = movingresults.l11Il;
+        l19 = (long)rectangle2.x & 0xffffffffL ^ l19 & 0xffffffff00000000L;
+        l6 = (long)rectangle.x & 0xffffffffL ^ l6 & 0xffffffff00000000L;
+        l10 = (long)((int)(l19 & 0xffffffffL) - (int)(l6 & 0xffffffffL)) << BreakoutGame.DoubleBallBonus.$55$ & 0xffffffff00000000L ^ l10 & 0xffffffffL;
+        l5 = (long)BreakoutGame.addBlock((int)((l10 & 0xffffffff00000000L) >> BreakoutGame.DoubleBallBonus.$55$)) & 0xffffffffL ^ l5 & 0xffffffff00000000L;
+        l12 = (long)rectangle2.y & 0xffffffffL ^ l12 & 0xffffffff00000000L;
+        l29 = (long)rectangle.y << BreakoutGame.DoubleBallBonus.$55$ & 0xffffffff00000000L ^ l29 & 0xffffffffL;
+        l24 = (long)((int)(l12 & 0xffffffffL) - (int)((l29 & 0xffffffff00000000L) >> BreakoutGame.DoubleBallBonus.$55$)) & 0xffffffffL ^ l24 & 0xffffffff00000000L;
+        l21 = (long)BreakoutGame.addBlock((int)(l24 & 0xffffffffL)) & 0xffffffffL ^ l21 & 0xffffffff00000000L;
+        l16 = (long)((int)(l16 & 0xffffffffL) + (int)(l5 & 0xffffffffL)) & 0xffffffffL ^ l16 & 0xffffffff00000000L;
+        l23 = (long)((int)(l23 & 0xffffffffL) + (int)(l21 & 0xffffffffL)) & 0xffffffffL ^ l23 & 0xffffffff00000000L;
+        l7 = (long)((int)(l16 & 0xffffffffL) + (int)(l23 & 0xffffffffL)) & 0xffffffffL ^ l7 & 0xffffffff00000000L;
+        if((int)(l5 & 0xffffffffL) == 0)
+        {
+            l1 = (long)Block.llI & ImmortalBlock.III ^ l1 & -2L;
+            break MISSING_BLOCK_LABEL_1132;
+        }
+        l1 = (long)BonusActor.lll & ImmortalBlock.III ^ l1 & -2L;
+        if((int)(l21 & 0xffffffffL) == 0)
+            l = (long)Block.llI << 54 & 0x40000000000000L ^ l & 0xffbfffffffffffffL;
+        else
+            l = (long)BonusActor.lll << 54 & 0x40000000000000L ^ l & 0xffbfffffffffffffL;
+        l = (long)((int)(l1 & ImmortalBlock.III) & (int)((l & 0x40000000000000L) >> 54)) << 63 & 0x8000000000000000L ^ l & 0x7fffffffffffffffL;
+        if((int)((l & 0x8000000000000000L) >> 63) != 0)
+            l27 = (long)(Block.llI + (int)(l27 & 0xffffffffL)) ^ l27 & 0xffffffff00000000L;
+        else
+            l27 = (long)BonusActor.lll & 0xffffffffL ^ l27 & 0xffffffff00000000L;
+        if((int)(l7 & 0xffffffffL) >= (int)(l17 & 0xffffffffL)) goto _L1; else goto _L2
+_L2:
+        l6 = (long)movingresults.I11ll << BreakoutGame.DoubleBallBonus.$55$ & 0xffffffff00000000L ^ l6 & 0xffffffffL;
+        if(((int)((l6 & 0xffffffff00000000L) >> BreakoutGame.DoubleBallBonus.$55$) & Block.llI) != 0)
+            i = -i;
+        l26 = (long)movingresults.I11ll & 0xffffffffL ^ l26 & 0xffffffff00000000L;
+        l18 = (long)((int)(l26 & 0xffffffffL) & BreakoutGame.S$55) & 0xffffffffL ^ l18 & 0xffffffff00000000L;
+        if((int)(l18 & 0xffffffffL) != 0)
+            j = -j;
+        if(i > 0)
+            l4 = (long)(i - (int)(l16 & 0xffffffffL)) & 0xffffffffL ^ l4 & 0xffffffff00000000L;
+        else
+            l4 = (long)(i + (int)(l16 & 0xffffffffL)) & 0xffffffffL ^ l4 & 0xffffffff00000000L;
+        if(j > 0)
+            l11 = (long)(j - (int)(l23 & 0xffffffffL)) & 0xffffffffL ^ l11 & 0xffffffff00000000L;
+        else
+            l11 = (long)(j + (int)(l23 & 0xffffffffL)) & 0xffffffffL ^ l11 & 0xffffffff00000000L;
+        MovingResults.toString(rectangle2, rectangle);
+        l15 = (long)movingresults.I11ll & 0xffffffffL ^ l15 & 0xffffffff00000000L;
+        l25 = (long)((int)(l15 & 0xffffffffL) & Block.llI) & 0xffffffffL ^ l25 & 0xffffffff00000000L;
+        if((int)(l25 & 0xffffffffL) != 0)
+        {
+            l3 = (long)(((MovingResults) (rectangle1)).I11ll & Block.llI) & 0xffffffffL ^ l3 & 0xffffffff00000000L;
+            if((int)(l3 & 0xffffffffL) != 0)
+            {
+                l23 = (long)((MovingResults) (rectangle1)).I11ll << BreakoutGame.DoubleBallBonus.$55$ & 0xffffffff00000000L ^ l23 & 0xffffffffL;
+                l28 = (long)((int)((l23 & 0xffffffff00000000L) >> BreakoutGame.DoubleBallBonus.$55$) - Block.llI) & 0xffffffffL ^ l28 & 0xffffffff00000000L;
+                rectangle1.I11ll = (int)(l28 & 0xffffffffL);
+            } else
+            {
+                l10 = (long)((MovingResults) (rectangle1)).I11ll & 0xffffffffL ^ l10 & 0xffffffff00000000L;
+                l22 = (long)((int)(l10 & 0xffffffffL) | Block.llI) & 0xffffffffL ^ l22 & 0xffffffff00000000L;
+                rectangle1.I11ll = (int)(l22 & 0xffffffffL);
+            }
+        }
+        l29 = (long)movingresults.I11ll & 0xffffffffL ^ l29 & 0xffffffff00000000L;
+        (int)(l29 & 0xffffffffL) & BreakoutGame.S$55;
+        DefaultStage.III1l;
+        JVM INSTR ifge 1765;
+           goto _L3 _L4
+_L3:
+        JVM INSTR pop ;
+        break MISSING_BLOCK_LABEL_2411;
+_L7:
+        throw ;
+_L4:
+        (long);
+        0xffffffffL;
+        JVM INSTR land ;
+        l2 & 0xffffffff00000000L;
+        JVM INSTR lxor ;
+        l2;
+        if((int)(l2 & 0xffffffffL) != 0)
+        {
+            l8 = (long)((MovingResults) (rectangle1)).I11ll & 0xffffffffL ^ l8 & 0xffffffff00000000L;
+            l14 = (long)((int)(l8 & 0xffffffffL) & BreakoutGame.S$55) & 0xffffffffL ^ l14 & 0xffffffff00000000L;
+            if((int)(l14 & 0xffffffffL) != 0)
+            {
+                l13 = (long)((MovingResults) (rectangle1)).I11ll & 0xffffffffL ^ l13 & 0xffffffff00000000L;
+                l12 = (long)((int)(l13 & 0xffffffffL) - BreakoutGame.S$55) << BreakoutGame.DoubleBallBonus.$55$ & 0xffffffff00000000L ^ l12 & 0xffffffffL;
+                rectangle1.I11ll = (int)((l12 & 0xffffffff00000000L) >> BreakoutGame.DoubleBallBonus.$55$);
+            } else
+            {
+                l9 = (long)((MovingResults) (rectangle1)).I11ll & 0xffffffffL ^ l9 & 0xffffffff00000000L;
+                l30 = (long)((int)(l9 & 0xffffffffL) | BreakoutGame.S$55) & 0xffffffffL ^ l30 & 0xffffffff00000000L;
+                rectangle1.I11ll = (int)(l30 & 0xffffffffL);
+            }
+        }
+_L1:
+        if((int)(l7 & 0xffffffffL) < (int)(l17 & 0xffffffffL))
+            l = (long)Block.llI << 60 & 0x1000000000000000L ^ l & 0xefffffffffffffffL;
+        else
+            l = (long)BonusActor.lll << 60 & 0x1000000000000000L ^ l & 0xefffffffffffffffL;
+        if((int)(l27 & 0xffffffffL) < BreakoutGame.TripleBonus.l1l1)
+            l = (long)Block.llI << 55 & 0x80000000000000L ^ l & 0xff7fffffffffffffL;
+        else
+            l = (long)BonusActor.lll << 55 & 0x80000000000000L ^ l & 0xff7fffffffffffffL;
+        l = (long)((int)((l & 0x1000000000000000L) >> 60) & (int)((l & 0x80000000000000L) >> 55)) << 62 & 0x4000000000000000L ^ l & 0xbfffffffffffffffL;
+        if((int)((l & 0x4000000000000000L) >> 62) == 0)
+            break; /* Loop/switch isn't completed */
+        l = (long)(movingactor.getDx() != DefaultStage.AnimationThread.IIl1) & 255L ^ l & -256L;
+        if((byte)(int)(l & 255L) != 0)
+            l = (long)Block.llI << 53 & 0x20000000000000L ^ l & 0xffdfffffffffffffL;
+        else
+            l = (long)BonusActor.lll << 53 & 0x20000000000000L ^ l & 0xffdfffffffffffffL;
+        l = (long)(movingactor.getDy() != DefaultStage.AnimationThread.IIl1) << 42 & 0x3fc0000000000L ^ l & 0xfffc03ffffffffffL;
+        if((byte)(int)((l & 0x3fc0000000000L) >> 42) != 0)
+            l = (long)Block.llI << 57 & 0x200000000000000L ^ l & 0xfdffffffffffffffL;
+        else
+            l = (long)BonusActor.lll << 57 & 0x200000000000000L ^ l & 0xfdffffffffffffffL;
+        l1 = (long)((int)((l & 0x20000000000000L) >> 53) | (int)((l & 0x200000000000000L) >> 57)) << Paddle.S5S & 8L ^ l1 & -9L;
+        if((int)((l1 & 8L) >> Paddle.S5S) != 0) goto _L6; else goto _L5
+_L5:
+        rectangle1.l11Il = movingresults.l11Il;
+        return rectangle1;
+        null;
+          goto _L7
+    }
+
+    protected MovingResults moveTemp(Stage stage, MovingActor movingactor, Rectangle rectangle, int i, int j)
+    {
+        return StraightLineMovementCalculator.advanceToCollision(movingactor, stage, rectangle, i, j);
+    }
+
+    public static boolean moveTemp(Enumeration enumeration)
+    {
+        return enumeration.hasMoreElements();
+    }
+
+    public static boolean move(Boolean boolean1)
+    {
+        return boolean1.booleanValue();
+    }
+
+    public static int move(String s)
+    {
+        return s.length();
+    }
+
+    public static Image move(int i, int j, Component component)
+    {
+        return component.createImage(i, j);
+    }
+
+    public static String I11 = "Error, invalid token:";
+    public static String lI11 = "Actor[] size:";
+    public static int $5S = 22;
+    public static int I1l1l = 8;
+    public static boolean S5$S$$ = true;
+    public static Boolean I1Ill = new Boolean(false);
+
+}
