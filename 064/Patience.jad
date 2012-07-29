@@ -1,0 +1,36 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: packimports(3) 
+
+import java.io.PrintStream;
+import java.math.BigInteger;
+import java.util.Random;
+
+public class Patience
+{
+
+    public Patience()
+    {
+    }
+
+    public static void main(String args[])
+    {
+        args = new Random(0xb483fL);
+        long l;
+        String s;
+        do
+        {
+            while((l = args.nextLong()) < 0L) ;
+            BigInteger biginteger;
+            BigInteger biginteger1 = biginteger = new BigInteger(Long.toString(l));
+            s = null;
+            for(int i = 0; i < 20000; i++)
+            {
+                biginteger1 = biginteger = (biginteger = biginteger.add(biginteger1)).add(new BigInteger("1"));
+                s = biginteger.toString();
+            }
+
+        } while(!(s = s.substring(s.length() - 9)).equals("843997183"));
+        System.out.println(l);
+    }
+}
