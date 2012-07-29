@@ -16,7 +16,7 @@ sub rot_x {
             next;
         }
 
-        my $i = 64;
+        my $i = 65;
         if($ascii > 96) {
             $i = 96;
         }
@@ -26,5 +26,4 @@ sub rot_x {
     
     return $text;
 }
-
 1;

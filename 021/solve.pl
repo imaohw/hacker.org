@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+my $cipher = "ISS NVVK DIPXYWA PIT AVSUY QIAOP PWZEHVNWIEDZ. CDYT ZVM LOTK ".
+             "HDY AVSMHOVT HV HDOA HYFH, ZVM COSS QY IQSY HV NYH HDY ITACYW".
+             ", CDOPD OA IKMGQWIHY.";
+
+$cipher =~ tr/ABCDEFGHIJKLMNOPQRSTUVWXYZ/SBWHPSMTAJDFUGICBRLNVORKEY/;
+print "$cipher\n";
+
