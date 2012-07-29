@@ -91,4 +91,18 @@ sub largest_prime {
     
     return $factor;
 }
+
+sub is_perfect_square {
+    use Math::Complex;
+
+    my $number = shift;
+    
+    my $rt = sqrt($number);
+    
+    if ($rt =~ /\D/) {
+        return 0;
+    }
+
+    return 1;
+}
 1;
