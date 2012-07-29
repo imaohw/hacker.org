@@ -30,4 +30,19 @@ sub dec2base {
     return $number . $result;
 }
 
+sub fibonacci {
+    my ($stop) = @_;
+    
+    my @fib = (0,1);
+    my $x = 0;
+    my $y = 1;
+
+    for(3..$stop) {
+        ($x, $y) = ($y, $x+$y);
+        push(@fib,$y);
+    }
+
+    return \@fib;
+}
+
 1;
