@@ -2,42 +2,25 @@
 
 use strict;
 use warnings;
-use LWP;
 use GD;
 
-my $username = "XXX";
-my $password = "XXX";
+require "../lib/account.pl";
 
-my $browser = LWP::UserAgent->new;
-$browser->cookie_jar({});
-
-sub login {
-    my $url = 'http://www.hacker.org/forum/login.php';
-    my $response = $browser->post($url,
-        [ username => "$username", 
-          password => "$password",
-          redirect => '',
-          login => 'Log In'
-        ]);
-    if($response->code == 302) {
-        $response = $browser->get('http://www.hacker.org');
-        if($response->content =~ /$username<\/small>/) {
-            print "Successful login\n";
-            return 0;
-        } else {
-            print "Error on login\n";
-            return 1;
-        }
-    } else {
-        print "Error on login\n";
-        return 1;
-    }
-}
+my $username = "whoami";
+my $password = "ieX0aRai5r";
 
 my $image = new GD::Image(3000,3000);
 my $white = $image->colorAllocate(255,255,255);
 my $black = $image->colorAllocate(0,0,0);
 my $grey = $image->colorAllocate(170,170,170);
+my $url = 'http://www.hacker.org/challenge/misc/maze.php?steps=';
+
+
+my $browser = login($username,$password);
+if($browser) {
+    no warnings 'recursion';
+    solve_maze("D",1500,20);
+}
 
 sub save_image {
     open IMAGE, ">maze.png";
@@ -47,7 +30,6 @@ sub save_image {
 }
 
 # Backtracking für den Endsieg
-my $url = 'http://www.hacker.org/challenge/misc/maze.php?steps=';
 sub solve_maze {
     my ($way,$x,$y) = @_;
     my $response = $browser->get($url.$way);
@@ -101,10 +83,5 @@ sub solve_maze {
         print $response->content."\n";
         return 0;
     }
-}
-
-if(login() == 0) {
-    no warnings 'recursion';
-    solve_maze("D",1500,20);
 }
 
