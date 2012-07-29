@@ -3,25 +3,27 @@
 use strict;
 use warnings;
 
-my $seq = "";
+use IO::Uncompress::Gunzip qw(gunzip);
 
-open PI, "<pi.txt";
-    my $tmp = "";
-    my $number;
-    while(read(PI,$number,1)) {
-        if($number eq ".") {
-            next;
-        }
-        
-        if($number == 9) {
-            if(length($tmp) > length($seq)) {
-                $seq = $tmp;
-            }
-            $tmp = "";
-        } else {
-            $tmp .= $number;
-        }
+my $seq = "";
+my $pi;
+
+gunzip("pi.txt.gz" => \$pi);
+
+my $tmp = "";
+foreach(split('',$pi)) {
+    if($_ eq ".") {
+        next;
     }
-close PI;
+        
+    if($_ == 9) {
+        if(length($tmp) > length($seq)) {
+            $seq = $tmp;
+        }
+        $tmp = "";
+    } else {
+        $tmp .= $_;
+    }
+}
 
 print "$seq\n";
