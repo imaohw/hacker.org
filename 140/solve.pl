@@ -10,5 +10,4 @@ close(FILE);
 my $cipher = join('',($text =~ /[A-Z]/g));
 $cipher =~ tr/ABCDEFGHIJKLMNOPQRSTUVWXYZ/AHWREFEHSJKVMNOPIASTUVNTYZ/;
 
-print $cipher;
-print "\n";
+print "$cipher\n";
