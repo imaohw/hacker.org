@@ -1,0 +1,17 @@
++90  (Turkey)      [T]R
++509 (Haiti)       [H]T
++20  (Egypt)       [E]G
++355 (Albania)     [A]L
++977 (Nepal)       [N]P
++46  (Sweden)      [S]E
++685 (Samoa)       [W]S
++503 (El Salvador) [S]V
++7   (Russia)      [R]U
++98  (Iran)        [I]R
++421 (Slovakia)    [S]K
++43  (Austria)     [A]T
++45  (Denmark)     [D]K
++380 (Ukraine)     [U]A
++377 (Monaco)      [M]C
+
+THE ANSWER IS ADUM
