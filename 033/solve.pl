@@ -6,8 +6,8 @@ use GD;
 
 require "../lib/account.pl";
 
-my $username = "whoami";
-my $password = "ieX0aRai5r";
+my $username = "XXX";
+my $password = "XXX";
 
 my $image = new GD::Image(3000,3000);
 my $white = $image->colorAllocate(255,255,255);
