@@ -3,19 +3,20 @@ import java.util.Random;
 
 public class Solve {
 
-    public static void main(String[] args) {
-        Random rnd = new Random(0xb483fL);
-        
-        long l;
-        
-        BigInteger two = new BigInteger("2");
-        BigInteger big;
-        BigInteger shift = two.pow(20000).subtract(BigInteger.ONE);
-        
-        BigInteger min = new BigInteger("843997183");
-        BigInteger mod = new BigInteger("1000000000");
+    static final Random rnd = new Random(0xb483fL);
 
+    static final BigInteger two = new BigInteger("2");
+    static final BigInteger min = new BigInteger("843997183");
+    static final BigInteger mod = new BigInteger("1000000000");
+
+    static final BigInteger shift = two.pow(20000).subtract(BigInteger.ONE);
+
+    public static void main(String[] args) {
+        BigInteger big;
+
+        long l;
         int count = 0;
+
         do {
             while((l = rnd.nextLong()) < 0L);
             big = BigInteger.valueOf(l);
