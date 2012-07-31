@@ -2,6 +2,10 @@
 
 use strict;
 use warnings;
+use POSIX qw(log10 ceil floor);
+
+use bignum;
+use bigint;
 
 sub dec2bin {
     my $str = unpack("B32", pack("N", shift));
@@ -43,6 +47,21 @@ sub fibonacci {
     }
 
     return \@fib;
+}
+
+sub fast_fib_number {
+    use bignum;
+    my $n = shift;
+
+    my $g = 1.61803398874989;
+    
+    return nearestint (($g ** $n) / sqrt(5));
+}
+
+sub nearestint {
+    my $v = shift;
+    my $f = floor($v); my $c = ceil($v);
+    ($v-$f) < ($c-$v) ? $f : $c;
 }
 
 sub largest_prime {
