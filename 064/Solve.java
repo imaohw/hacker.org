@@ -7,13 +7,13 @@ public class Solve {
 
     static final BigInteger two = new BigInteger("2");
     static final BigInteger min = new BigInteger("843997183");
-    static final BigInteger mod = new BigInteger("1000000000");
+    static final BigInteger mod = new BigInteger("1000000000");  
 
     static final BigInteger shift = two.pow(20000).subtract(BigInteger.ONE);
 
     public static void main(String[] args) {
         BigInteger big;
-
+        
         long l;
         int count = 0;
 
