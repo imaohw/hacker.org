@@ -1,0 +1,4 @@
+1. Extract archives
+2. Look for a file
+3. Look at folder structure(./6/1/0/8/3)
+4. Use 1337 speak: 61083 == globe
