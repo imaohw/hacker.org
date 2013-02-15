@@ -3,39 +3,16 @@
 use strict;
 use warnings;
 
-use LWP;
+require "../lib/account.pl";
+
 use URI::Escape;
 
-my $username = "whoami";
-my $password = "hund1234";
+my $username = "xxx";
+my $password = "yyy";
 
-my $browser = LWP::UserAgent->new;
-$browser->cookie_jar({});
+my $browser = login($username, $password);
 
-sub login {
-    my $url = 'http://www.hacker.org/forum/login.php';
-    my $response = $browser->post($url,
-        [ username => "$username", 
-          password => "$password",
-          redirect => '',
-          login => 'Log In'
-        ]);
-    if($response->code == 302) {
-        $response = $browser->get('http://www.hacker.org');
-        if($response->content =~ /$username<\/small>/) {
-            print "Successful login\n";
-            return 0;
-        } else {
-            print "Error on login\n";
-            return 1;
-        }
-    } else {
-        print "Error on login\n";
-        return 1;
-    }
-}
-
-if(login == 0) {
+if($browser) {
     my $url = "http://www.hacker.org/challenge/chal.php";
     my $response = $browser->get($url."?id=76");
     
