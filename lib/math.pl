@@ -6,6 +6,7 @@ use POSIX qw(log10 ceil floor);
 
 use bignum;
 use bigint;
+use Scalar::Util::Numeric qw(isint);
 
 sub dec2bin {
     my $str = unpack("B32", pack("N", shift));
@@ -122,6 +123,32 @@ sub is_perfect_square {
         return 0;
     }
 
+    return 1;
+}
+
+sub is_prime {
+    my ($number) = @_;
+
+    my $last = substr($number, -1);
+
+    if($last == 0 || $last == 2 || $last == 4 || $last == 5 || $last == 6 || $last == 8) {
+        return 0;
+    }
+
+    my $sqrt = sqrt($number);
+
+    for(my $i = 3; $i <= $sqrt && $i < 5000; $i+=2) {
+        if(substr($i,-1) == 5) {
+            next;
+        }
+        if($i % 1001 == 0) {
+            #print(" ::$i/$sqrt\n");
+        }
+        if(isint($number/$i)) {
+            return 0;
+        }
+    }
+    
     return 1;
 }
 1;
