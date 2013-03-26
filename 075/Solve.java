@@ -1,11 +1,7 @@
-                         // Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
-// Jad home page: http://www.geocities.com/kpdus/jad.html
-// Decompiler options: packimports(3)
-
-                         public class Branches
+public class Solve
 {
 
-    public Branches()
+    public Solve()
     {
     }
 
@@ -264,7 +260,7 @@
 
     public static void main(String args[])
     {
-        Branches branches = new Branches();
+        Solve branches = new Solve();
         System.out.println(branches.vq());
     }
 }
